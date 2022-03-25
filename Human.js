@@ -1,5 +1,5 @@
 let Human = {
-    a = 5,
-    b = true,
-    new_ban = false
+    a: 5,
+    b: true,
+    new_ban: false
 }
