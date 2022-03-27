@@ -1,18 +1,19 @@
 window.onload = () => {
-    let a = (x = 0, y = 0) => {
-        console.log(this);
+    const arr = [-5,67,1,2,5,-1];
+    function sortNum(a, b) {
+        return a - b;
     }
-    let d = {
-        x: 0,
-        y: 1,
-        e: function(){
-            console.log(this);
-        },
-        f: () => {
-            console.log(this.x + " " + this.y);
+    const arr1 = Array.prototype.filter.call(arr, val => {
+        if(val > 0) {
+            return true;
         }
+    })
+    .map((val) => {
+        return val ** 5;
+    })
+    .sort(sortNum)
+    .reverse();
+    for(let a of arr1){
+        console.log(a);
     }
-    a();
-    d.e();
-    d.f.apply(d);
 };
